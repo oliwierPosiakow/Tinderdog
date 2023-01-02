@@ -1,0 +1,22 @@
+
+*{
+    font-size: 16px;
+}
+
+header{
+    min-width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.wrapper{
+    max-width:1000px ;
+    background-color: red;
+}
