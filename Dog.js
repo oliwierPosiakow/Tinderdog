@@ -10,15 +10,18 @@ class Dog{
     setSwiped(){
         this.hasBeenSwiped = true
     }
-    setDogHtml(){
-        const {name, avatar, age, bio} = this
-        document.getElementById("dog-el").innerHTML = `
+    getDogHtml(){
+        const {name, age, bio} = this
+        return `
             <div class="dog" id="dog">
                 <p class="name">${name}, ${age}</p>
                 <p class="desc">${bio}</p>
             </div>
         `
-        document.getElementById("dog").style.backgroundImage = `url(${avatar})`
+        
+    }
+    setDogAvatar(){
+        document.getElementById("dog").style.backgroundImage = `url(${this.avatar})`
     }
 }
 

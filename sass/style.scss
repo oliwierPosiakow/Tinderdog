@@ -4,18 +4,29 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
-body{
-    background: linear-gradient(#FFF, #F8F8F8);
+
+body, header{
     margin: 0;
 }
+body{
+    justify-content: center;
+    align-items: center;
+    max-width: 420px;
+    background: linear-gradient(#FFF, #F8F8F8);
+}
+body, main, .dog{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+//header styling
 header{
-    min-width: 100vw;
 
     min-height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
         a{
             margin: 1em 0.5em;
             cursor: pointer;
@@ -26,24 +37,23 @@ header{
             }
         }
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+
+// styling dog container
+.dog-container{
+    position: relative;
 }
+
 .dog-el{
     position: relative;
     padding: 5px;
     .dog{
-        width: 100%;
+        width: 300px;
         min-height: 70vh;
         border-radius: 7px;
         padding: 5px;
         background-position: center;
         background-size: cover;
-        // background-image: url("/images/dog-rex.jpg");
         color: white;
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
@@ -62,6 +72,24 @@ main{
         }
     }
 }
+.liked-badge{
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 40px;
+    left: 10px;
+    rotate: -35deg;
+    
+}
+.nope-badge{
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 40px;
+    left: 10px;
+    rotate: -35deg;
+}
+
 .buttons{
     margin: 7px 0;
     width: 100%;
@@ -93,4 +121,9 @@ main{
             background: #FFE7EF;
             box-shadow: 0px 5px 7px rgba(172, 128, 143, 0.55);
         }
+}
+
+// utility classes
+.visible{
+    display: block;
 }
